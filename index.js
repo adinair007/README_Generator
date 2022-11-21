@@ -86,7 +86,7 @@ function writeToFile(fileName, data) {
         if (err){
             return console.log(err);
         }
-        console.log("Your README.mmd has been generated!!");
+        console.log("Your README.md has been generated!!");
     });
 };
 
