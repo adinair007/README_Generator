@@ -90,8 +90,16 @@ function writeToFile(fileName, data) {
     });
 };
 
-// TODO: Create a function to initialize app
-function init() {}
+const writeFile = util.promisify(writeToFile);
 
-// Function call to initialize app
+//--Function to initialize app--
+async function init() {
+    const answers = await inquirer.prompt(questions);
+    console.log(answers);
+
+    const newMarkdown = generateMarkdown(answers);
+    await writeFile('README.md', newMarkdown);
+}
+
+//--Function call to initialize app--
 init();
