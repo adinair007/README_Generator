@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const generateMarkdown = require('./utils/generateMarkdown.js')
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 //--Creating an array of questions for user input--
 const questions = [
@@ -76,15 +76,30 @@ const questions = [
     {
         type: 'input',
         message: 'What commands are needed to test this application? (To skip press ENTER)',
-        name: 'username'
+        name: 'testing'
     },
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+//--Function to write README file--
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err =>{
+        if (err){
+            return console.log(err);
+        }
+        console.log("Your README.mmd has been generated!!");
+    });
+};
 
-// TODO: Create a function to initialize app
-function init() {}
+const writeFile = util.promisify(writeToFile);
 
-// Function call to initialize app
+//--Function to initialize app--
+async function init() {
+    const answers = await inquirer.prompt(questions);
+    console.log(answers);
+
+    const newMarkdown = generateMarkdown(answers);
+    await writeFile('README.md', newMarkdown);
+}
+
+//--Function call to initialize app--
 init();
