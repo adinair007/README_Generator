@@ -45,8 +45,7 @@ const questions = [
   //--Needed installations--
   {
     type: "input",
-    message: `What additional installations would a user need to successfully run this application (dependencies,etc..)?
-        (To Skip, press ENTER.) `,
+    message: "What additional installations would a user need to successfully run this application (dependencies,etc..)? (To Skip, press ENTER.) ",
     name: "installation",
   },
 
@@ -68,8 +67,7 @@ const questions = [
   //--Contributing--
   {
     type: "input",
-    message: `If you would like other developers to contribute to this project, please enter guidelines on how to do so.
-    (To skip, press ENTER)`,
+    message: "If you would like other developers to contribute to this project, please enter guidelines on how to do so. (To skip, press ENTER)",
     name: "contributing",
   },
 
