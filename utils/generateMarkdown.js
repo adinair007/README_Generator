@@ -36,7 +36,7 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
 
-  ${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
 
   ## Table-of-Contents
   * [Description](#desccription)
@@ -46,8 +46,30 @@ function generateMarkdown(data) {
   * [Tests](#tests)
   * [Questions](#questions)
 
+${renderLicenseLink(data.license)}
+
+  ## [Description](#table-of-contents)
+
+  ## [Installation](#table-of-contents)
+    ${data.installation}
+
+  ## [Useage](#table-of-contents)
+    ${data.instructions}
+
+${renderLicenseSection(data.license)}
+  
+  ## [Contributing](#table-of-contents)
+
+
+  ## [Tests](#table-of-contents)
+  ${data.testing}
+
+  ## [Questions](#table-of-contents)
+  For any questions, contact me at :
+    [Github] (https://github.com/${data.username})
+    [Email: ${data.email}](mailto:${data.email})  
 
 `;
-}
+};
 
 module.exports = generateMarkdown;
