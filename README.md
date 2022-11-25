@@ -7,6 +7,8 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#useage)
+  * [Tutorial](#tutorial)
+  * [License](#license)
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
@@ -21,6 +23,9 @@
 
   ## [Useage](#table-of-contents)
   Run the command 'node index.js' through the terminal. The user will then go through a series of prompts which will capture the user's data. Once completed a   README.md file will be generated.
+  
+  ## [Tutorial](#table-of-contents)
+  Tutorial video: https://watch.screencastify.com/v/6TuhTMvvJEg1WRJOA9wy
 
   ## [License](#table-of-contents)
   This application has the following license:
