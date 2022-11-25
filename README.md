@@ -22,7 +22,7 @@
   ## [Useage](#table-of-contents)
   Run the command 'node index.js' through the terminal. The user will then go through a series of prompts which will capture the user's data. Once completed a   README.md file will be generated.
 
-  ##[License](#table-of-contents)
+  ## [License](#table-of-contents)
   This application has the following license:
   [MIT](https://choosealicense.com/licenses/MIT)
     
